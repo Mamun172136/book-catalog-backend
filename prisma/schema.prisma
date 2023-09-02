@@ -42,3 +42,18 @@ model Category {
   @@map("categories")
 }
 
+model Book {
+  id              String                 @id @default(uuid())
+  title           String
+  author            String
+  price            Float
+  genre             String
+  publicationDAte    String
+  createdAt       DateTime               @default(now())
+  updatedAt       DateTime               @updatedAt
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+ 
+
+  @@map("books")
+}
