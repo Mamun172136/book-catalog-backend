@@ -28,7 +28,19 @@ const getCategories = async (req: Request, res: Response) => {
   }
 };
 
+const getSingleCategory = catchAsync(async (req: Request, res: Response) => {
+  const result = await CategoryService.getSingleCategory(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: ' category fetched successfully !!',
+    data: result,
+  });
+});
+
 export const CategoryController = {
   insertIntoDB,
   getCategories,
+  getSingleCategory,
 };
