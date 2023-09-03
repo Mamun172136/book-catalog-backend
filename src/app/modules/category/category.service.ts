@@ -28,10 +28,30 @@ const getSingleCategory = async (id: string): Promise<Category | null> => {
   return result;
 };
 
+const update = async (id: string, payload: Partial<Category>): Promise<any> => {
+  const isExist = await prisma.category.findUnique({
+    where: {
+      id,
+    },
+  });
+
+  if (isExist) {
+    const result = await prisma.category.update({
+      where: {
+        id,
+      },
+      data: payload,
+    });
+
+    return result;
+  }
+};
+
 export const CategoryService = {
   insertIntoDB,
   getCategories,
   getSingleCategory,
+  update,
   // updateOneInDB,
   // deleteByIdFromDB
 };
