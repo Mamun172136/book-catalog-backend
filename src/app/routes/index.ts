@@ -10,7 +10,7 @@ const moduleRoutes = [
     routes: authRoutes,
   },
   {
-    path: '/auth/signin',
+    path: '/auth',
     routes: authRoutes,
   },
 ];

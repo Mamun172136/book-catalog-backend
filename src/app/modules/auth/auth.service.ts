@@ -14,7 +14,7 @@ const insertIntoDB = async (data: User): Promise<User> => {
 };
 
 const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
-  const { id, password } = payload;
+  const { email, password } = payload;
   // creating instance of User
   // const user = new User();
   //  // access to our instance methods
@@ -22,7 +22,7 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
 
   const isUserExist = await prisma.user.findUnique({
     where: {
-      id,
+      email,
     },
   });
 
@@ -37,8 +37,11 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   //create access token & refresh token
 
   const { id: userId, role } = isUserExist;
+  // Calculate the expiration time for one year in seconds
+  const oneYearInSeconds = 365 * 24 * 60 * 60;
+
   const accessToken = jwtHelpers.createToken(
-    { userId, role, exp: '365d' },
+    { userId, role, iat: Math.floor(Date.now() / 1000) + oneYearInSeconds },
     'secret',
     '365d'
   );

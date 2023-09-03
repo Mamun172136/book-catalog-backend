@@ -11,9 +11,9 @@ router.post(
   authController.insertIntoDB
 );
 router.post(
-  '/',
-  validateRequest(authValidation.create),
-  authController.insertIntoDB
+  '/signin',
+  validateRequest(authValidation.loginZodSchema),
+  authController.loginUser
 );
 
 export const authRoutes = router;
