@@ -10,10 +10,10 @@ router.post(
   validateRequest(authValidation.create),
   authController.insertIntoDB
 );
-// router.post(
-//   '/',
-//   validateRequest(authValidation.create),
-//   authController.insertIntoDB
-// );
+router.post(
+  '/',
+  validateRequest(authValidation.create),
+  authController.insertIntoDB
+);
 
 export const authRoutes = router;
