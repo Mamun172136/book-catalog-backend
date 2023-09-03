@@ -31,8 +31,8 @@ model User {
 }
 
 enum Role {
-  CUSTOMER
-  ADMIN
+  customer
+  admin
 }
 
 model Category {

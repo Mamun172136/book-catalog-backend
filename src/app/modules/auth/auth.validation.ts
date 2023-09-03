@@ -12,7 +12,7 @@ const create = z.object({
     password: z.string({
       required_error: 'Password is required',
     }),
-    status: z.enum([...Object.values(Role)] as [string, ...string[]], {}),
+    role: z.enum([...Object.values(Role)] as [string, ...string[]], {}),
     contactNo: z.string({
       required_error: 'contact is required',
     }),
@@ -25,6 +25,18 @@ const create = z.object({
   }),
 });
 
+// const loginZodSchema = z.object({
+//   body: z.object({
+//     id: z.string({
+//       required_error: 'ID is required',
+//     }),
+//     password: z.string({
+//       required_error: 'Password is required',
+//     }),
+//   }),
+// });
+
 export const authValidation = {
   create,
+  loginZodSchema,
 };

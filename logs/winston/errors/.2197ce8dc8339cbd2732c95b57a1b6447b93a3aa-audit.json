@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\errors\\.2197ce8dc8339cbd2732c95b57a1b6447b93a3aa-audit.json",
+    "files": [
+        {
+            "date": 1693695190413,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-03-09-04-error.log",
+            "hash": "68502e6ab3d9867c55bb609e664cfa29a14dd40ec1140fe8ee54eaabb2d02b0b"
+        },
+        {
+            "date": 1693696044512,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-03-09-05-error.log",
+            "hash": "8b32fe93c616532c4a9af5e6826564a9702ffef464e95c5e3b7e6e4e11d8b57b"
+        },
+        {
+            "date": 1693700630183,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-03-09-06-error.log",
+            "hash": "7d595aaceaa3f8ece9780353805f26b816f314ffe672be7aaf395c2ec6badbc4"
+        }
+    ],
+    "hashType": "sha256"
+}
