@@ -1,6 +1,8 @@
 import express from 'express';
 import { authRoutes } from '../modules/auth/auth.route';
+import { BookRoutes } from '../modules/books/book.route';
 import { CategoryRoutes } from '../modules/category/category.route';
+import { OrderRoute } from '../modules/order/order.route';
 import { UserRoutes } from '../modules/users/user.route';
 
 const router = express.Router();
@@ -26,6 +28,14 @@ const moduleRoutes = [
   {
     path: '/categories',
     routes: CategoryRoutes,
+  },
+  {
+    path: '/books',
+    routes: BookRoutes,
+  },
+  {
+    path: '/orders',
+    routes: OrderRoute,
   },
 ];
 

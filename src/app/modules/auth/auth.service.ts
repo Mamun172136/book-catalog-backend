@@ -38,10 +38,10 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
 
   const { id: userId, role } = isUserExist;
   // Calculate the expiration time for one year in seconds
-  const oneYearInSeconds = 365 * 24 * 60 * 60;
-
+  //   const oneYearInSeconds = 365 * 24 * 60 * 60;
+  // iat: Math.floor(Date.now() / 1000) + oneYearInSeconds
   const accessToken = jwtHelpers.createToken(
-    { userId, role, iat: Math.floor(Date.now() / 1000) + oneYearInSeconds },
+    { userId, role },
     'secret',
     '365d'
   );

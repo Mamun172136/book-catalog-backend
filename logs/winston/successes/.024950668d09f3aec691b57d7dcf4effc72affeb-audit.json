@@ -39,6 +39,36 @@
             "date": 1693724430660,
             "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-13-success.log",
             "hash": "0cf3d54e32d29c4d41d9a0887d9189c181c9aab9cb25de8990ec11ec7494f81b"
+        },
+        {
+            "date": 1693731100583,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-14-success.log",
+            "hash": "fe6090f323d35d39e11a97152e6f6944e71007a3b6046c69ddadbcff555a8a55"
+        },
+        {
+            "date": 1693731623696,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-15-success.log",
+            "hash": "dc991df1ff4bcd0c49611755d543ba3a824296f735f9e258723a5591ff9bb74f"
+        },
+        {
+            "date": 1693737248615,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-16-success.log",
+            "hash": "5e46a1db6b70d8162a86c411984b88b90b96b2381cbf07ec9f4bd9dd9a469a6e"
+        },
+        {
+            "date": 1693738807660,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-17-success.log",
+            "hash": "2f1ccea5b2c1790c6e99cb39b1a24e14b608d86ac242ee7e6c3b75e79a995f28"
+        },
+        {
+            "date": 1693747580590,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-19-success.log",
+            "hash": "6c9f9c92110429b10a892ef4d60b74f6cf34bf669b4dffe3915942c87e28290b"
+        },
+        {
+            "date": 1693749741036,
+            "name": "G:\\projects\\NEXT LEVEL 2\\prisma assignment 2\\book-catalog-backend\\logs\\winston\\successes\\phu-2023-03-09-20-success.log",
+            "hash": "02c246f52fee3f9554eacef0b0dfbe732dea4c61c34151e6c4bbc2d9df734f37"
         }
     ],
     "hashType": "sha256"

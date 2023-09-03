@@ -12,6 +12,7 @@ const insertIntoDB = async (categoryData: Category): Promise<Category> => {
 const getCategories = async () => {
   const result = await prisma.category.findMany({
     select: {
+      id: true,
       title: true,
     },
   });

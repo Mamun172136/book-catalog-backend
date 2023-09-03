@@ -21,14 +21,25 @@ const getUsers = async (req: Request, res: Response) => {
 
 const getSingleUser = catchAsync(async (req: Request, res: Response) => {
   const result = await UserService.getSingleUser(req.params.id);
-  const { password, ...others } = result;
+  if (result) {
+    // The result is not null, so you can safely destructure it
+    const { password, ...others } = result;
 
-  sendResponse(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: ' user getched successfully !!',
-    data: others,
-  });
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'User fetched successfully !!',
+      data: others,
+    });
+  } else {
+    // Handle the case where result is null (e.g., user not found)
+    sendResponse(res, {
+      statusCode: httpStatus.NOT_FOUND,
+      success: false,
+      message: 'User not found',
+      data: null,
+    });
+  }
 });
 
 const update = catchAsync(async (req: Request, res: Response) => {
