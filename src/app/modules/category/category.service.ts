@@ -9,9 +9,19 @@ const insertIntoDB = async (categoryData: Category): Promise<Category> => {
   return result;
 };
 
+const getCategories = async () => {
+  const result = await prisma.category.findMany({
+    select: {
+      title: true,
+    },
+  });
+
+  return result;
+};
+
 export const CategoryService = {
   insertIntoDB,
-  // getAllFromDB,
+  getCategories,
   // getDataById,
   // updateOneInDB,
   // deleteByIdFromDB

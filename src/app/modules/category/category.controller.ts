@@ -15,6 +15,20 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getCategories = async (req: Request, res: Response) => {
+  try {
+    const result = await CategoryService.getCategories();
+    res.send({
+      succes: true,
+      message: 'category retrieved successfully!',
+      data: result,
+    });
+  } catch (err) {
+    res.send(err);
+  }
+};
+
 export const CategoryController = {
   insertIntoDB,
+  getCategories,
 };

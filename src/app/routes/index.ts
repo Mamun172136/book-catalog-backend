@@ -23,6 +23,10 @@ const moduleRoutes = [
     path: '/categories/create-category',
     routes: CategoryRoutes,
   },
+  {
+    path: '/categories',
+    routes: CategoryRoutes,
+  },
 ];
 
 moduleRoutes.forEach(route => router.use(route.path, route.routes));
