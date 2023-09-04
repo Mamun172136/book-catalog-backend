@@ -13,10 +13,22 @@ router.post(
   auth(ENUM_USER_ROLE.ADMIN),
   BookController.insertIntoDB
 );
+
+router.get(
+  '/',
+
+  BookController.getAllBooks
+);
+
 router.get(
   '/:id',
 
   BookController.getSingleBook
+);
+router.get(
+  '/:categoryId/category',
+
+  BookController.getSingleBookByCategory
 );
 router.patch(
   '/:id',

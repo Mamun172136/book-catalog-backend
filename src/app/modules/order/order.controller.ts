@@ -23,6 +23,35 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllOrders = catchAsync(async (req: Request, res: Response) => {
+  const result = await OrderService.getAllOrders();
+
+  sendResponse<Order[]>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'order fetched successfully!!',
+    data: result,
+  });
+});
+
+const getOrderBySepecific = catchAsync(async (req: Request, res: Response) => {
+  const { userId, role } = req.user as { userId: string; role: string };
+  console.log('line 39');
+  console.log(req.user);
+  const { orderId } = req.params;
+
+  const result = await OrderService.getOrderBySepecific(orderId, userId, role);
+
+  sendResponse<Order[] | Order>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'order fetched successfully!!',
+    data: result,
+  });
+});
+
 export const OrderController = {
   insertIntoDB,
+  getAllOrders,
+  getOrderBySepecific,
 };
