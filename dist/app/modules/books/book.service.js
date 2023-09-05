@@ -38,6 +38,8 @@ const insertIntoDB = (bookData) => __awaiter(void 0, void 0, void 0, function* (
 const getAllBooks = (filters, options) => __awaiter(void 0, void 0, void 0, function* () {
     const { limit, page, skip } = paginationHelper_1.paginationHelpers.calculatePagination(options);
     const { searchTerm, maxPrice, minPrice } = filters, filterData = __rest(filters, ["searchTerm", "maxPrice", "minPrice"]);
+    console.log(filters);
+    console.log(searchTerm, maxPrice, minPrice);
     const andConditions = [];
     if (searchTerm) {
         andConditions.push({
@@ -52,10 +54,10 @@ const getAllBooks = (filters, options) => __awaiter(void 0, void 0, void 0, func
     if (minPrice || maxPrice) {
         const priceCondition = {};
         if (minPrice) {
-            priceCondition.$gte = minPrice;
+            priceCondition.gte = Number(minPrice);
         }
         if (maxPrice) {
-            priceCondition.$lte = maxPrice;
+            priceCondition.lte = Number(maxPrice);
         }
         andConditions.push({ price: priceCondition });
     }

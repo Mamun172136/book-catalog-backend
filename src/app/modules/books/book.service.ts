@@ -25,6 +25,8 @@ const getAllBooks = async (
 ): Promise<IGenericResponse<Book[]>> => {
   const { limit, page, skip } = paginationHelpers.calculatePagination(options);
   const { searchTerm, maxPrice, minPrice, ...filterData } = filters;
+  console.log(filters);
+  console.log(searchTerm, maxPrice, minPrice);
 
   const andConditions = [];
 
@@ -42,10 +44,10 @@ const getAllBooks = async (
   if (minPrice || maxPrice) {
     const priceCondition: { [key: string]: number } = {};
     if (minPrice) {
-      priceCondition.$gte = minPrice;
+      priceCondition.gte = Number(minPrice);
     }
     if (maxPrice) {
-      priceCondition.$lte = maxPrice;
+      priceCondition.lte = Number(maxPrice);
     }
     andConditions.push({ price: priceCondition });
   }

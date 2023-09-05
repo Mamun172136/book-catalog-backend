@@ -16,6 +16,9 @@ app.use((0, cookie_parser_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api/v1', routes_1.default);
+app.get('/', (req, res) => {
+    res.send('Hello World! from book catalog backend');
+});
 //global error handler
 app.use(globalErrorHandler_1.default);
 //handle not found
