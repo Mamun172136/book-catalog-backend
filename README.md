@@ -1,6 +1,6 @@
 
 
-##  Live Link <a href="https://book-catalog-backend-six.vercel.app/" target="_blank">Google</a>
+##  Live Link <a href="https://book-catalog-backend-six.vercel.app/" target="_blank">Live Link</a>
 
 ## user
 ## api/v1/auth/signup (POST)
@@ -25,4 +25,10 @@
 ## api/v1/books/ed3935f8-31c3-4879-966f-f7f77bcc7f3c (single GET)
 ## api/v1/books/ed3935f8-31c3-4879-966f-f7f77bcc7f3c (patch)
 ## api/v1/books/ed3935f8-31c3-4879-966f-f7f77bcc7f3c (delete)
+
+## orders
+
+##  api/v1/orders/create-order  post
+##  api/v1/orders   get
+##   api/v1/orders/157ebb9b-e938-4702-bbdb-98bfe453068d   get
 
