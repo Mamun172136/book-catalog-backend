@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World! from book catalog backend');
 });
