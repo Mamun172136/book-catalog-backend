@@ -32,6 +32,9 @@ const book_constant_1 = require("./book.constant");
 const insertIntoDB = (bookData) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield prisma_1.default.book.create({
         data: bookData,
+        include: {
+            category: true,
+        },
     });
     return result;
 });

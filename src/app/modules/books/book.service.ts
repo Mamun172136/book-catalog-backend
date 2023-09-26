@@ -14,6 +14,9 @@ import {
 const insertIntoDB = async (bookData: Book): Promise<Book> => {
   const result = await prisma.book.create({
     data: bookData,
+    include: {
+      category: true,
+    },
   });
 
   return result;

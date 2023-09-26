@@ -48,11 +48,17 @@ const loginUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void
     //   httpOnly: true,
     // };
     // res.cookie('refreshToken', refreshToken, cookieOptions);
-    (0, sendResponse_1.default)(res, {
-        statusCode: 200,
+    // sendResponse<ILoginUserResponse>(res, {
+    //   statusCode: 200,
+    //   success: true,
+    //   message: 'User signin successfully!"!',
+    //   data: result,
+    // });
+    res.status(400).json({
         success: true,
+        statusCode: 200,
         message: 'User signin successfully!"!',
-        data: result,
+        token: result.accessToken,
     });
 }));
 exports.authController = {
